@@ -16,15 +16,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
+import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
 import { SantanderFormComponent } from './pages/santander-form/santander-form.component';
 import { SantanderListaComponent } from './pages/santander-lista/santander-lista.component';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
+    ConfirmDialogComponent,
     SantanderListaComponent,
     SantanderFormComponent
   ],
@@ -43,7 +45,9 @@ import { SantanderListaComponent } from './pages/santander-lista/santander-lista
      MatInputModule,
      MatCardModule,
      MatTableModule,
-     MatIconModule
+     MatIconModule,
+     MatProgressBarModule,
+     MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

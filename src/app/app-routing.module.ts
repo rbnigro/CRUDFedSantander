@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'usuarios/incluir', component: SantanderListaComponent },
   { path: 'usuarios/incluir/lote', component: SantanderListaComponent },
   { path: 'usuarios/delete/:id', component: SantanderFormComponent },
-  // { path: 'usuarios/editar/:id', component: SantanderFormComponent }
+  { path: 'usuarios/editar/:id', component: SantanderFormComponent }
 ];
 
 @NgModule({

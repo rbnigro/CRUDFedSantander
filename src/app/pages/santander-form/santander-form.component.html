@@ -1,22 +1,40 @@
-<mat-toolbar color="primary">
-  {{ titulo }}
-</mat-toolbar>
-
 <mat-card>
-  <form [formGroup]="form" (ngSubmit)="salvar()">
-    <mat-form-field appearance="fill" class="full-width">
+  <mat-toolbar color="primary">{{ titulo }}</mat-toolbar>
+
+  <form [formGroup]="form" (ngSubmit)="salvar()" class="form-container">
+
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Nome</mat-label>
-      <input matInput formControlName="nome" required />
+      <input matInput formControlName="nome" placeholder="Digite o nome" />
+      <mat-error *ngIf="form.get('nome')?.hasError('required')">
+        O nome é obrigatório.
+      </mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Email</mat-label>
-      <input matInput type="email" formControlName="email" required />
+      <input matInput formControlName="email" placeholder="Digite o email" />
+      <mat-error *ngIf="form.get('email')?.hasError('required')">
+        O email é obrigatório.
+      </mat-error>
+      <mat-error *ngIf="form.get('email')?.hasError('email')">
+        Informe um email válido.
+      </mat-error>
     </mat-form-field>
 
-    <div class="botoes">
-      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Salvar</button>
-      <button mat-button routerLink="/usuarios">Cancelar</button>
+    <div class="actions">
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || carregando">
+        {{ carregando ? 'Salvando...' : 'Salvar' }}
+      </button>
+      <button mat-button color="warn" type="button" (click)="cancelar()">
+        Cancelar
+      </button>
     </div>
+
+    <mat-progress-bar *ngIf="carregando" mode="indeterminate" color="accent"></mat-progress-bar>
+
+    <mat-error *ngIf="erro" class="erro-msg">
+      {{ erro }}
+    </mat-error>
   </form>
 </mat-card>
