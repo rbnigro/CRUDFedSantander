@@ -17,7 +17,7 @@ export class UsuariosService {
   }
 
   buscarPorId(id: number): Observable<Usuario> {
-    return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
+    return this.http.get<Usuario>(`${this.apiUrl}consulta/${id}`);
   }
 
   salvar(usuario: Usuario): Observable<Usuario> {
@@ -25,7 +25,7 @@ export class UsuariosService {
   }
 
   atualizar(id: number, usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>(`${this.apiUrl}/${id}`, usuario);
+    return this.http.put<Usuario>(`${this.apiUrl}editar/${id}`, usuario);
   }
 
   excluir(id: number): Observable<void> {
