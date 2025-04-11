@@ -27,14 +27,18 @@ export class SantanderListaComponent implements OnInit {
     });
   }
 
-
-   deletar(id: number) {
+  deletar(id: number) {
     if (confirm('Deseja realmente excluir este usuário?')) {
-      this.usuarioService.excluir(id).subscribe(() => {
-        alert('Usuário excluído com sucesso!');
-        this.carregarUsuarios();
+      this.usuarioService.excluir(id).subscribe({
+        next: () => {
+          alert('Usuário excluído com sucesso!');
+          this.carregarUsuarios(); 
+        },
+        error: err => {
+          console.error('Erro ao excluir usuário:', err);
+          alert('Erro ao excluir o usuário.');
+        }
       });
     }
   }
-
 }

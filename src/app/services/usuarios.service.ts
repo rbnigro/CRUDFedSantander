@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsuariosService {
 
-  private apiUrl = 'http://localhost:8080/usuarios/'; 
+  private apiUrl = 'http://localhost:8080/usuarios/';
 
   constructor(private http: HttpClient) {}
 
@@ -29,6 +29,6 @@ export class UsuariosService {
   }
 
   excluir(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    return this.http.delete<void>(`${this.apiUrl}delete/${id}`);
   }
 }
