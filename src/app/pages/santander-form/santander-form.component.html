@@ -3,7 +3,7 @@
 
   <form [formGroup]="form" (ngSubmit)="salvar()" class="form-container">
 
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field class="texto-branco" appearance="outline" class="full-width">
       <mat-label>Nome</mat-label>
       <input matInput formControlName="nome" placeholder="Digite o nome" />
       <mat-error *ngIf="form.get('nome')?.hasError('required')">
@@ -11,7 +11,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field class="texto-branco" appearance="outline" class="full-width">
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" placeholder="Digite o email" />
       <mat-error *ngIf="form.get('email')?.hasError('required')">

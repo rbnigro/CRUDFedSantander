@@ -19,6 +19,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
 import { SantanderFormComponent } from './pages/santander-form/santander-form.component';
 import { SantanderListaComponent } from './pages/santander-lista/santander-lista.component';

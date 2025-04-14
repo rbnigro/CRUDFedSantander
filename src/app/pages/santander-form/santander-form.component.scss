@@ -1,25 +1,32 @@
-* {
-  background-color: rgb(92, 4, 4) !important;
+@use 'src/styles' as *;
+
+:host {
+  @extend .texto-branco;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 16px;
-}
 
-.full-width {
-  width: 100%;
-}
+// * {
+//   background-color: rgb(92, 4, 4) !important;
+// }
 
-.actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-}
+// .form-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 16px;
+//   padding: 16px;
+// }
 
-.erro-msg {
-  color: red;
-  margin-top: 8px;
-}
+// .full-width {
+//   width: 100%;
+// }
+
+// .actions {
+//   display: flex;
+//   gap: 12px;
+//   margin-top: 16px;
+// }
+
+// .erro-msg {
+//   color: red;
+//   margin-top: 8px;
+// }
