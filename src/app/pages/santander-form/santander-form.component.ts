@@ -75,7 +75,8 @@ if (paramId) {
         complete: () => this.carregando = false
       });
     } else {
-      this.usuarioService.salvar(this.form.value).subscribe({
+      // this.usuarioService.salvar(this.form.value).subscribe({
+      this.usuarioService.incluir(this.form.value).subscribe({
         next: sucesso,
         error: erro,
         complete: () => this.carregando = false

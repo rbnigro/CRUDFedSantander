@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'usuarios', component: SantanderListaComponent },
   { path: 'usuarios/all', component: SantanderListaComponent },
   { path: 'usuarios/consulta/:id', component: SantanderListaComponent },
-  { path: 'usuarios/incluir', component: SantanderListaComponent },
+  { path: 'usuarios/incluir', component: SantanderFormComponent },
   { path: 'usuarios/incluir/lote', component: SantanderListaComponent },
   { path: 'usuarios/delete/:id', component: SantanderFormComponent },
   { path: 'usuarios/editar/:id', component: SantanderFormComponent }

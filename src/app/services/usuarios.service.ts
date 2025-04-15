@@ -1,6 +1,6 @@
+import { Usuario } from './../models/usuarios';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Usuario } from '../models/usuarios';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -20,9 +20,9 @@ export class UsuariosService {
     return this.http.get<Usuario>(`${this.apiUrl}consulta/${id}`);
   }
 
-  salvar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(this.apiUrl, usuario);
-  }
+  // salvar(usuario: Usuario): Observable<Usuario> {
+  //   return this.http.post<Usuario>(this.apiUrl, usuario);
+  // }
 
   atualizar(id: number, usuario: Usuario): Observable<Usuario> {
     return this.http.put<Usuario>(`${this.apiUrl}editar/${id}`, usuario);
@@ -30,5 +30,9 @@ export class UsuariosService {
 
   excluir(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}delete/${id}`);
+  }
+
+  incluir(usuario: Usuario): Observable<Usuario>{
+    return this.http.post<Usuario>(`${this.apiUrl}incluir/`, usuario);
   }
 }
