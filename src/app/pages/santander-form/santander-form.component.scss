@@ -1,32 +1,37 @@
-@use 'src/styles' as *;
-
 :host {
-  @extend .texto-branco;
+  @extend .texto-branco !optional;
 }
 
+* {
+  background-color: rgb(92, 4, 4) !important;
+}
 
-// * {
-//   background-color: rgb(92, 4, 4) !important;
-// }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
 
-// .form-container {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 16px;
-//   padding: 16px;
-// }
+.texto-branco {
+  color: white;
 
-// .full-width {
-//   width: 100%;
-// }
+  th, td, p, mat-icon {
+    color: white !important;
+  }
+}
 
-// .actions {
-//   display: flex;
-//   gap: 12px;
-//   margin-top: 16px;
-// }
+.full-width {
+  width: 100%;
+}
 
-// .erro-msg {
-//   color: red;
-//   margin-top: 8px;
-// }
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.erro-msg {
+  color: red;
+  margin-top: 8px;
+}
