@@ -1,11 +1,15 @@
 .lista-container * {
-  background-color: rgb(92, 4, 4) !important;
+  background-color: rgb(92, 4, 4);
 }
 
 .lista-container {
-  margin: 20px;
+ margin: 20px;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.coluna-id {
+  text-align: right;
 }

@@ -8,7 +8,11 @@
 
 <mat-card class="lista-container texto-branco">
   <table mat-table [dataSource]="usuarios" class="mat-elevation-z8" *ngIf="usuarios?.length !== 0">
-  <!-- <table mat-table [dataSource]="usuarios" class="mat-elevation-z8"> -->
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef class="coluna-id"> Id </th>
+      <td mat-header-cell *matCellDef="let usuario" class="coluna-id"> {{usuario.id }} </td>
+    </ng-container>
 
     <ng-container matColumnDef="nome">
       <th mat-header-cell *matHeaderCellDef> Nome </th>
@@ -36,4 +40,4 @@
     <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
   </table>
 
-  <p *ngIf="usuarios?.length === 0">Banco de Dados Vazio!
+  <p *ngIf="usuarios?.length === 0">Sem Dados Para Exibir!

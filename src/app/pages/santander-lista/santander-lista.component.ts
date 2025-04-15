@@ -12,7 +12,7 @@ import { UsuariosService } from '../../services/usuarios.service';
 export class SantanderListaComponent implements OnInit {
 
   usuarios: Usuario[] = [];
-  colunas: string[] = ['nome', 'email', 'acoes'];
+  colunas: string[] = ['id', 'nome', 'email', 'acoes'];
 
   constructor(private usuarioService: UsuariosService) {}
 
@@ -32,7 +32,7 @@ export class SantanderListaComponent implements OnInit {
       this.usuarioService.excluir(id).subscribe({
         next: () => {
           alert('Usuário excluído com sucesso!');
-          this.carregarUsuarios(); 
+          this.carregarUsuarios();
         },
         error: err => {
           console.error('Erro ao excluir usuário:', err);
