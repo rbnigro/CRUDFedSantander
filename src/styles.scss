@@ -19,3 +19,11 @@ html, body {
   color: rgb(92, 4, 4) !important;
   font-weight: bold;
 }
+
+.snackbar-sucesso .mdc-snackbar__surface {
+  background-color: white !important;
+  color: rgb(92, 4, 4, 0.6) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+  justify-content: center !important; /* Centraliza o conteúdo */
+  text-align: center !important;
+}

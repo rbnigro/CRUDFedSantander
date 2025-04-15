@@ -58,7 +58,10 @@ if (paramId) {
     if (this.form.invalid) return;
 
     const sucesso = () => {
-      this.snackBar.open('Usuário salvo com sucesso!', 'Fechar', { duration: 3000 });
+      this.snackBar.open('Usuário salvo com sucesso!', '', {
+        duration: 3000,
+        panelClass: ['snackbar-sucesso']
+       });
       this.router.navigate(['/usuarios']);
     };
 
@@ -75,7 +78,6 @@ if (paramId) {
         complete: () => this.carregando = false
       });
     } else {
-      // this.usuarioService.salvar(this.form.value).subscribe({
       this.usuarioService.incluir(this.form.value).subscribe({
         next: sucesso,
         error: erro,

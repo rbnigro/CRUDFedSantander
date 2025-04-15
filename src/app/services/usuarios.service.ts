@@ -20,10 +20,6 @@ export class UsuariosService {
     return this.http.get<Usuario>(`${this.apiUrl}consulta/${id}`);
   }
 
-  // salvar(usuario: Usuario): Observable<Usuario> {
-  //   return this.http.post<Usuario>(this.apiUrl, usuario);
-  // }
-
   atualizar(id: number, usuario: Usuario): Observable<Usuario> {
     return this.http.put<Usuario>(`${this.apiUrl}editar/${id}`, usuario);
   }

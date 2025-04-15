@@ -4,15 +4,15 @@
   <form [formGroup]="form" (ngSubmit)="salvar()" class="form-container">
 
     <mat-form-field class="texto-branco" appearance="outline" class="full-width">
-      <mat-label>Nome</mat-label>
+      <mat-label>Nome </mat-label>
       <input matInput formControlName="nome" placeholder="Digite o nome" class="input-config" />
       <mat-error *ngIf="form.get('nome')?.hasError('required')">
         O nome é obrigatório.
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="texto-branco" appearance="outline" class="full-width input-config">
-      <mat-label>Email</mat-label>
+    <mat-form-field class="texto-branco" appearance="outline" class="full-width">
+      <mat-label>Email </mat-label>
       <input matInput formControlName="email" placeholder="Digite o email" class="input-config" />
       <mat-error *ngIf="form.get('email')?.hasError('required')">
         O email é obrigatório.
