@@ -1,4 +1,4 @@
-* {
+.lista-container * {
   background-color: rgb(92, 4, 4) !important;
 }
 
@@ -8,13 +8,4 @@
 
 .spacer {
   flex: 1 1 auto;
-}
-
-.texto-vermelho {
-  color: red !important;
-}
-
-.borda-branhca {
-  border: 1px solid white !important;
-  border-radius: 4px;
 }
